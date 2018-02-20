@@ -6,11 +6,15 @@ package in.techmahindra.anydomain.sts.domain;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+
 /**
  * @author SV00542797
  *
  */
-public class User 
+@Entity
+ class User 
 {
 	
 	
@@ -18,6 +22,7 @@ public class User
 	private String userId;
 	private String password;
 	private List<Role> roles;
-	private AuditTrail auditTrailField;
+	@Embedded
+	private AuditTrail auditTrail;
 
 }
