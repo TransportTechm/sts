@@ -1,12 +1,12 @@
-package in.techmahindra.sts.anydomain;
+package in.techmahindra.anydomain.sts.driver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StsTempApplication {
+public class StsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StsTempApplication.class, args);
+		SpringApplication.run(StsApplication.class, args);
 	}
 }
