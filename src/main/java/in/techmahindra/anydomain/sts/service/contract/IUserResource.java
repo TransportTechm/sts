@@ -16,15 +16,13 @@ import in.techmahindra.anydomain.sts.service.dto.UserDto;
  * @author SV00542797
  *
  */
-@RestController
+
 public interface IUserResource 
 {
-	@PostMapping
-	@RequestMapping("/sts/ver1/users/user/signup")
-	public void signUp(@RequestBody UserDto userDto);
+	
+	public void signUp(UserDto userDto);
 	//TODO - following needs to be removed - it's a test 
-	@GetMapping
-	@RequestMapping("/sts/ver1/test1")
+	
 	public String testEndPoint();
 	
 

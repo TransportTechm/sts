@@ -1,16 +1,27 @@
 package in.techmahindra.anydomain.sts.service.impl;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import in.techmahindra.anydomain.sts.service.contract.IUserResource;
 import in.techmahindra.anydomain.sts.service.dto.UserDto;
 
-@Service
+@Component
+@RestController
+@RequestMapping("/api")
 public class CUserResourceImpl implements IUserResource 
 {
 
 	@Override
-	public void signUp(UserDto userDto) 
+	@PostMapping
+	@RequestMapping("/sts/ver1/users/user/signup")
+	public void signUp(@RequestBody UserDto userDto) 
 	{
 		// TODO Auto-generated method stub
 		try
@@ -29,6 +40,7 @@ public class CUserResourceImpl implements IUserResource
 	}
 
 	@Override
+	@RequestMapping(method = RequestMethod.GET, value = "/sts/ver1/test1")
 	public String testEndPoint() {
 		// TODO Auto-generated method stub
 		try

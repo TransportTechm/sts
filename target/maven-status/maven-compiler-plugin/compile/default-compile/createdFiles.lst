@@ -1,0 +1,7 @@
+in\techmahindra\anydomain\sts\driver\StsApplication.class
+in\techmahindra\anydomain\sts\service\contract\IUserResource.class
+in\techmahindra\anydomain\sts\service\dto\UserDto.class
+in\techmahindra\anydomain\sts\domain\AuditTrail.class
+in\techmahindra\anydomain\sts\domain\Role.class
+in\techmahindra\anydomain\sts\domain\User.class
+in\techmahindra\anydomain\sts\service\impl\CUserResourceImpl.class
