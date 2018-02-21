@@ -1,0 +1,1 @@
+java -jar target/sts-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=local spring.config.name = application.yml spring.config.location = C:\Users\sv00542797\sram\springboot\C:\Users\sv00542797\sram\springboo
