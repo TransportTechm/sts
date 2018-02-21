@@ -3,7 +3,7 @@
  */
 package in.techmahindra.anydomain.sts.service.contract;
 
-import in.techmahindra.anydomain.sts.domain.User;
+import in.techmahindra.anydomain.sts.service.dto.UserDto;
 
 /**
  * @author SV00542797
@@ -11,6 +11,6 @@ import in.techmahindra.anydomain.sts.domain.User;
  */
 public interface IUserResource 
 {
-	public void signUp(User userDto);
+	public void signUp(UserDto userDto);
 
 }
