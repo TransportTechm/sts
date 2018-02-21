@@ -7,9 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 import in.techmahindra.anydomain.sts.service.impl.CUserResourceImpl;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @ComponentScan(basePackageClasses = CUserResourceImpl.class)
+@EnableSwagger2
 public class StsApplication 
 {
 	private Logger logger = Logger.getLogger(this.getClass().toString());
