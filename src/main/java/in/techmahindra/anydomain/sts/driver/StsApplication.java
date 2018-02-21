@@ -19,3 +19,4 @@ public class StsApplication
 		SpringApplication.run(StsApplication.class, args);
 	}
 }
+	
