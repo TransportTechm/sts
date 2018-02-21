@@ -1,5 +1,7 @@
 package in.techmahindra.anydomain.sts.service.impl;
 
+import java.util.logging.Logger;
+
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +19,7 @@ import in.techmahindra.anydomain.sts.service.dto.UserDto;
 @RequestMapping("/api")
 public class CUserResourceImpl implements IUserResource 
 {
+	private Logger logger = Logger.getLogger(this.getClass().toString());
 
 	@Override
 	@PostMapping

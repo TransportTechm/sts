@@ -5,6 +5,7 @@ package in.techmahindra.anydomain.sts.domain;
 
 import java.util.Calendar;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -16,6 +17,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.Transient;
 
 /**
  * @author SV00542797
