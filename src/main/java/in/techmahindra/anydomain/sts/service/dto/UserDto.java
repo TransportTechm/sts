@@ -3,15 +3,22 @@
  */
 package in.techmahindra.anydomain.sts.service.dto;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 
 /**
  * @author SV00542797
  *
  */
-public class UserDto 
+//TODO - can store more fields, for now, this should do for a first-cut
+public class UserDto implements Serializable
 {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7930730405774260952L;
 	private String userId;
 	private String password;
 	/**
