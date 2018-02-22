@@ -1,1 +1,7 @@
 java -jar target/sts-0.0.1-SNAPSHOT.jar spring.config.name = application spring.config.location =file:///C:\Users\sv00542797\sram\springboot\application.yml
+
+
+
+
+git remote add origin-https https://github.com/TransportTechm/sts.git
+git push -u origin-https master

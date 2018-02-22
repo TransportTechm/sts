@@ -24,7 +24,7 @@ import javax.persistence.Transient;
  *
  */
 @Entity
- class User 
+ public class User 
 {
 	
 	@Column(name="id")
