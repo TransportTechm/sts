@@ -23,7 +23,8 @@ import javax.persistence.Transient;
  * @author SV00542797
  *
  */
-@Entity
+@Entity(name="users")
+
  public class User 
 {
 	

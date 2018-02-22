@@ -27,6 +27,17 @@ public class AuditTrail
 		this.createdBy = createdBy;
 		this.updatedBy = updatedBy;
 	}
+	/**
+	 * 
+	 */
+	public AuditTrail() 
+	{
+		super();
+		this.createdDateTime = null;
+		this.updatedDateTime = null;
+		this.createdBy = null;
+		this.updatedBy = null;
+	}
 	@Column(name = "cr_dt")
 	@Temporal(TemporalType.TIMESTAMP)
 	private final Calendar createdDateTime;
