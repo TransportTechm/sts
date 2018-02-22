@@ -1,5 +1,6 @@
 package in.techmahindra.anydomain.sts.service.impl;
 
+import java.util.Calendar;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import in.techmahindra.anydomain.sts.domain.AuditTrail;
+import in.techmahindra.anydomain.sts.domain.Role;
+import in.techmahindra.anydomain.sts.domain.User;
 import in.techmahindra.anydomain.sts.persitence.IUserRepository;
 import in.techmahindra.anydomain.sts.service.contract.IUserResource;
 import in.techmahindra.anydomain.sts.service.dto.UserDto;
@@ -35,11 +39,24 @@ public class CUserResourceImpl implements IUserResource
 		// TODO Auto-generated method stub
 		try
 		{
+			if (userDto == null)
+				throw new RuntimeException("no user to sign-up");
+			Calendar createdDateTime = Calendar.getInstance();
+			Calendar updatedDateTime = null;
 			
+			AuditTrail auditTrail = new AuditTrail(createdDateTime,updatedDateTime,"system","");
+			Role role = null;
+			User user = new User();
+			user.setAuditTrail(auditTrail);
+			user.setRoles(null);
+			user.setPassword(userDto.getPassword());
+			user.setUserId(userDto.getUserId());
+			User newUser = iUserRepository.save(user);//not used - newly created user
+				
 		}
 		catch(Exception ex)
 		{
-			
+			ex.printStackTrace();//TODO - to log it
 		}
 		finally
 		{
@@ -65,6 +82,20 @@ public class CUserResourceImpl implements IUserResource
 			
 		}
 		return "{HI there, test}";
+	}
+
+	/**
+	 * @return the iUserRepository
+	 */
+	public IUserRepository getiUserRepository() {
+		return iUserRepository;
+	}
+
+	/**
+	 * @param iUserRepository the iUserRepository to set
+	 */
+	public void setiUserRepository(IUserRepository iUserRepository) {
+		this.iUserRepository = iUserRepository;
 	}
 
 }

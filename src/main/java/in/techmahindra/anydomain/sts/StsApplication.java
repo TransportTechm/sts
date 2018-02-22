@@ -1,4 +1,4 @@
-package in.techmahindra.anydomain.sts.driver;
+package in.techmahindra.anydomain.sts;
 
 import java.util.logging.Logger;
 
@@ -6,11 +6,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
+import in.techmahindra.anydomain.sts.persitence.IUserRepository;
 import in.techmahindra.anydomain.sts.service.impl.CUserResourceImpl;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @ComponentScan(basePackageClasses = CUserResourceImpl.class)
+//@ComponentScan(basePackageClasses = IUserRepository.class)
 @EnableSwagger2
 public class StsApplication 
 {

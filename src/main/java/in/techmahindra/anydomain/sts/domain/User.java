@@ -36,7 +36,7 @@ import javax.persistence.Transient;
 	@Column(name="password")
 	private String password;
 	@ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "userrole", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "role_id"))
+    @JoinTable(name = "userrole", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
 	private List<Role> roles;
 	@Embedded
 	private AuditTrail auditTrail;
