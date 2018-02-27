@@ -25,12 +25,11 @@ public class UserDto implements Serializable
 	 * @param userId
 	 * @param password
 	 */
+	
 	public UserDto()
 	{
-		this.userId = null;
-		this.password = null;
+		
 	}
-	
 	public UserDto(String userId, String password)
 	{
 		super();

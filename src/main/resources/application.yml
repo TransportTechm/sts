@@ -1,22 +1,32 @@
 --- 
+
+
 spring: 
-  datasource: 
-    password: rootdb
-    url: "jdbc:mysql://localhost:3306/stsmsdb"
-    username: root
   jpa: 
-    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
-    show-sql: true
-  profiles: 
-    name: local
----
-spring:
-   profiles: 
-    name: cloud
+    show-sql: true   
+    Database: MYSQL
+    
+
+  h2:
+    console:
+      enabled: true 
+    
+    
+  
+security:
+  basic:
+    enabled: false
+management:
+  security:
+    enabled: false
+   
+  
+  
+
 ---
 spring:
     profiles:
       active:cloud
 
-    
+
    

@@ -5,10 +5,3 @@ java -jar target/sts-0.0.1-SNAPSHOT.jar spring.config.name = application spring.
 
 git remote add origin-https https://github.com/TransportTechm/sts.git
 git push -u origin-https master
-
-
-{
-"userId":"sai1@sai.com",
-"password":"sai123"
-
-}

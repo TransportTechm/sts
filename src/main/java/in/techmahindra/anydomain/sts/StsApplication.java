@@ -12,7 +12,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @ComponentScan(basePackageClasses = CUserResourceImpl.class)
-//@ComponentScan(basePackageClasses = IUserRepository.class)
+
+@ComponentScan(basePackages = "in.techmahindra.anydomain.sts")
 @EnableSwagger2
 public class StsApplication 
 {

@@ -16,5 +16,7 @@ import in.techmahindra.anydomain.sts.domain.User;
 public interface IUserRepository extends JpaRepository<User, Long>
 {
 	
+	
+	User findByuserId(String uid);
 
 }

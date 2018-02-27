@@ -25,15 +25,28 @@ public class Role
 	private long id;
 	private String name;
 	private String descr;
-	@Embedded
+	@Embedded	
 	private AuditTrail auditTrail;
 	@ManyToMany(mappedBy = "roles")
 	private List<User> users;
 	/**
 	 * @return the id
 	 */
+	
+	public Role()
+	{
+		
+		
+	}
 	public long getId() {
 		return id;
+	}
+	public Role(String name, String descr, AuditTrail auditTrail, List<User> users) {
+		super();
+		this.name = name;
+		this.descr = descr;
+		this.auditTrail = auditTrail;
+		this.users = users;
 	}
 	/**
 	 * @return the name
@@ -89,9 +102,6 @@ public class Role
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
-	/**
-	 * 
-	 */
 	
 
 }

@@ -1,0 +1,15 @@
+---
+applications:
+  - name: sts  
+    
+    memory: 1024M
+    env:
+      
+      SPRING_PROFILES_ACTIVE: cloud
+    services:
+      - test-clearDB
+      
+buildpack: https://github.com/cloudfoundry/java-buildpack.git   
+
+env:
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}' 

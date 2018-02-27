@@ -20,6 +20,10 @@ public class AuditTrail
 	 * @param createdBy
 	 * @param updatedBy
 	 */
+	public AuditTrail()
+	{
+		
+	}
 	public AuditTrail(Calendar createdDateTime, Calendar updatedDateTime, String createdBy, String updatedBy) {
 		super();
 		this.createdDateTime = createdDateTime;
@@ -27,23 +31,12 @@ public class AuditTrail
 		this.createdBy = createdBy;
 		this.updatedBy = updatedBy;
 	}
-	/**
-	 * 
-	 */
-	public AuditTrail() 
-	{
-		super();
-		this.createdDateTime = null;
-		this.updatedDateTime = null;
-		this.createdBy = null;
-		this.updatedBy = null;
-	}
 	@Column(name = "cr_dt")
 	@Temporal(TemporalType.TIMESTAMP)
-	private final Calendar createdDateTime;
+	private  Calendar createdDateTime;
 	@Column(name = "up_dt")
 	@Temporal(TemporalType.TIMESTAMP)
-	private final Calendar updatedDateTime;
+	private  Calendar updatedDateTime;
 	/**
 	 * @return the createdDateTime
 	 */
@@ -69,8 +62,8 @@ public class AuditTrail
 		return updatedBy;
 	}
 	@Column(name = "cr_by")
-	private final String createdBy;
+	private  String createdBy;
 	@Column(name = "up_by")
-	private final String updatedBy;
+	private  String updatedBy;
 
 }
